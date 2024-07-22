@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="santillan.jpg" type="image/x-icon">
+    <title>Carlos Santillan- Front-end Dev</title>
+   
+ <link rel="stylesheet" href="tailwind.css" /> 
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+    <style>
+      body {
+        background: rgb(2, 0, 36);
+        background: linear-gradient(
+          90deg,
+          rgba(2, 0, 36, 1) 0%,
+          rgba(2, 7, 44, 1) 0%,
+          rgba(3, 45, 79, 1) 56%,
+          rgba(2, 6, 43, 1) 100%,
+          rgba(4, 88, 163, 1) 100%
+        );
+        font-family: montserrat;
+      }
+
+      /*CREATE AN ANIMATION THAT THE CHILDREN GO TO THE LEFT, SOMETHING LIKE SCROLL TO LEFT*/
+      @keyframes scroll {
+          0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+
+      }
+      .using-scroll{
+     
+       animation: scroll 10s linear infinite;
+        /* animation-name: scroll;
+         animation-duration: 10s;
+         animation-iteration-count: infinite;
+         animation-timing-function: linear; */
+
+      }
+
+.wave-button {
+  position: relative;
+  padding: 15px 30px;
+  font-size: 16px;
+  color: #fff;
+  background: linear-gradient(135deg, #222223, #2c6fe2);
+  border: none;
+  border-radius: 50px;
+  overflow: hidden;
+  cursor: pointer;
+  background-size: 200% 200%;
+  animation: wave-animation 8s infinite ease-in-out reverse;
+}
+
+@keyframes wave-animation {
+  0% {
+    background-position: 0% 20%;
+  }
+  20%{
+    background-position: 20% 40%;
+  }
+  40% {
+    background-position: 40% 60%;
+  }
+  60% {
+    background-position: 60% 80%;
+  }
+  80% {
+    background-position: 80% 100%;
+  }
+  100% {
+    background-position: 0% 20%;
+  }
+}
+
+@keyframes grow {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(1.1);
+  }
+  
+}
+
+.using-grow:hover{
+  animation: grow 1s linear normal ;
+  cursor: pointer;
+    transform: scale(1.1);
+    transition: all .3s ease-in-out;
+
+}
+
+/*MODIFY THE BAR SLICE OF THE PAGE COLOR DARK BLUE AND THIN*/
+
+
+/* Para navegadores basados en WebKit como Chrome y Safari */
+::-webkit-scrollbar {
+  width: 8px; /* Ancho de la barra de desplazamiento vertical */
+  height: 8px; /* Altura de la barra de desplazamiento horizontal */
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1; /* Color de fondo del track de la barra */
+}
+
+::-webkit-scrollbar-thumb {
+  background: #0a0a0a; /* Color del thumb de la barra */
+  border-radius: 10px; /* Bordes redondeados del thumb */
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #555; /* Color del thumb al pasar el cursor */
+}
+
+/* Para Firefox */
+* {
+  scrollbar-width: thin; /* Ancho de la barra */
+  scrollbar-color: #0a0a0a #f1f1f1; /* Color del thumb y del track */
+}
+
+
+
+    </style>
+  </head>
+  <body class="blue-dark">
+   
+<header  class="flex justify-center text-xl  text-white">
+  <div class="flex font-medium w-1/2 justify-between">
+ <h1>Santillan</h1>
+
+  <button class="language border border-gray-300 w-20 rounded-xl">ES</button>
+
+  </div>
+ 
+</header>
+    <main class="lg:p-8 p-3 text-white">
+      <section class="p-4 lg:p-10 flex lg:flex-row flex-col gap-8 justify-evenly">
+        <article class="flex flex-col basis-1/2  ">
+          <figure class="flex flex-col text-center lg:text-left">
+            <figcaption class="flex lg:flex-row lg:justify-start flex-col gap-3">
+              <img
+                src="santillan.jpg"
+                alt="santillan-developer"
+                class="rounded-full w-20 h-20 lg:mr-0 lg:ml-0 mr-auto ml-auto"
+              />
+
+              <div class="s-article-div-1">
+                <h2 class="h2-1 lg:text-3xl">Hi,I am santillan,</h2>
+                <h2 class="h2-2 lg:text-4xl font-bold"> Full-Stack </h2>
+              </div>
+            </figcaption>
+
+            <div  class="s-article-div-2 flex flex-col justify-evenly">
+              <h2 class="font-medium lg:text-xl p-2">
+              
+                I'm passionate about the world of programming
+              </h2>
+              <p class="p-2">
+              I enjoy learning to improve my abilities
+                
+              </p>
+              <nav class="flex justify-evenly"  >
+                <a href="santillan.pdf" target="_blank" class="border rounded wave-button border-gray-300 p-2 font-semibold  flex items-center justify-center"
+                  ><p>Currículum</p></a
+                ><a href="https://www.linkedin.com/in/carlos-santillan-70b4522b0"
+                target="_blank" class="border rounded border-gray-300 p-2">
+                  <img src="linkedin.svg" alt="linkedin"  class="w-8 h-8 rounded bg-white"  />
+                  </a
+                ><a href="https://github.com/Santillan-Go" target="_blank" class="border rounded border-gray-300 p-2">
+
+
+                  <img src="gitlight.svg" alt="github" class="w-8 h-8 bg-white rounded"/>
+                </a>
+                </a>
+              </nav>
+            </div>
+          </figure>
+        </article>
+        <article class="s-article-2 flex flex-col justify-center gap-2 items-center  text-center lg:text-left ">
+          <h2 class="lg:text-3xl font-medium">Now I am improving my skills</h2>
+          <h3 class="text-xl">I am constantly learning because I enjoy it</h3>
+          <h4  class="text-xl">I also prioritize my soft skills</h4>
+        </article>
+      </section>
+
+      <section class="w-4/6 pl-5 pr-4 overflow-hidden mr-auto ml-auto mt-10" >
+        <div class="flex using-scroll justify-evenly lg:gap-28 gap-10">
+
+        <h2 class="text-2x1 uppercase font-semibold "  >JavaScript</h2>
+        <h2 class="text-2x1 uppercase font-semibold  ">React</h2>
+        <h2 class="text-2x1 uppercase font-semibold ">Tailwind</h2>
+        <h2 class="text-2x1 uppercase font-semibold ">TypeScript</h2>
+        <h2 class="text-2x1 uppercase font-semibold "  >Git</h2>
+        <h2 class="text-2x1 uppercase font-semibold"  >Github</h2>
+        <h2 class="text-2x1 uppercase font-semibold"  >CSS</h2>
+        <h2 class="text-2x1 uppercase font-semibold"  >Nextjs</h2>
+        </div>
+      </section>
+
+      <section  class="  mt-36">
+<h2 class="font-semibold text-3xl text-gray-200 p-2">Proyectos Personales</h2>
+
+        <div  class="projects-container flex flex-wrap justify-evenly mt-8 gap-5">
+          
+         <article class="w-96  border rounded-xl p-3 using-grow  ">
+          <img src="movies.png" class="rounded-lg" alt="app-movies">
+<div >
+  <h2 class="text-2xl font-semibold text-center">App Movies</h2>
+  <p class="text-gray-200 p-2">
+    App Movies es una app que te permite buscar peliculas y series .
+  </p>
+</div>
+<a href="https://moviemdn.netlify.app/" target="_blank" class="text-2xl">🔗</a>
+         </article>
+        <article class="w-96  border rounded-xl p-3 using-grow">
+          <img src="memoriza.png" class="rounded-lg" alt="app-memoriza">
+          <div>
+
+            <h2 class="text-2xl font-semibold text-center">Memoriza</h2>
+            <p class="text-gray-200 p-2">
+              Memoriza es una app que te permite memorizar palabras.
+            </p>
+          </div>
+          <a href="https://memoriza-m.netlify.app/#/" target="_blank" class="text-2xl">🔗</a>
+        </article>
+        <article class="w-96  border rounded-xl p-3 using-grow ">
+          <img src="store.png" class="rounded-lg" alt="app-memoriza">
+
+          <div>
+            <h2 class="text-2xl font-semibold text-center">Store</h2>
+            <p class="text-gray-200 p-2">
+              Store es una app que te permite buscar y agregar al carrito tus productos favoritos.
+            </p>
+          </div>
+         
+ <a href="https://store-nextjs-occcfwtev-santiillan-cs-projects.vercel.app/" target="_blank" class="text-2xl">🔗</a>
+        </article>
+        </div>
+       
+      </section>
+      
+    </main>
+
+    <script>
+const d=document;
+//IN SPANISH
+const personalProjects_SPANISH=[
+  {
+    title:"App Movies",
+    description:"App Movies es una app que te permite buscar peliculas y series .",
+    link:"https://moviemdn.netlify.app/",
+    image:"movies.png"
+  },
+  {
+    title:"Memoriza",
+    description:"Memoriza es una app que te permite memorizar palabras.",
+    image:"memoriza.png",
+    link:"https://memoriza-m.netlify.app/#/"
+  },{
+    title:"Store",
+    description:"Store es una app que te permite buscar y agregar al carrito tus productos favoritos.",
+    image:"store.png",
+    link:"https://store-nextjs-occcfwtev-santiillan-cs-projects.vercel.app/"
+  }
+
+]
+      
+const personalProjects_ENGLISH=[
+  {
+    title:"App Movies",
+    description:"App Movies is an app that allow you to search movies and tv series",
+    image:"movies.png",
+    link:"https://moviemdn.netlify.app/"
+  },
+  {
+    title:"Memoriza",
+    description:"Memoriza is an app that allow you to memorize words",
+    image:"memoriza.png",
+    link:"https://memoriza-m.netlify.app/#/"
+  },{
+    title:"Store",
+    description:"Store is an app that allow you to search and add to cart your favorite products",
+    image:"store.png",
+    link:"https://store-nextjs-occcfwtev-santiillan-cs-projects.vercel.app/"
+  }
+]
+      const button = d.querySelector(".language"),
+      article_2=d.querySelector(".s-article-2"),
+      article_div_1=d.querySelector(".s-article-div-1"),
+      article_div_2=d.querySelector(".s-article-div-2");
+      const projects_container=d.querySelector(".projects-container");
+      const fragment=d.createDocumentFragment();
+      
+   let currentLanguage="en";
+
+const renderProjects=(projects)=>{
+projects_container.innerHTML="";
+  projects.forEach(project => {
+    const article=d.createElement("article");
+    const image=d.createElement("img");
+    image.setAttribute("src",project.image);
+    image.classList.add("rounded-lg");
+    const h2=d.createElement("h2");
+    
+    h2.classList.add("text-2x1");
+    h2.classList.add("font-semibold");
+    h2.classList.add("text-center");
+    h2.textContent=project.title;
+    const p=d.createElement("p");
+    p.textContent=project.description;
+    //text-gray-200 p-2
+    p.classList.add("text-gray-200")
+    p.classList.add("p-2")
+
+    const a=d.createElement("a");
+    a.textContent="🔗";
+    a.setAttribute("href",project.link);
+    const div=d.createElement("div");
+    div.appendChild(h2);
+    div.appendChild(p);
+    article.appendChild(image);
+    article.appendChild(div);
+    article.appendChild(a);
+    article.classList.add("w-96");
+    article.classList.add("border");
+    article.classList.add("rounded-xl");
+    article.classList.add("p-3");
+    article.classList.add("using-grow");
+    fragment.appendChild(article);
+  });
+
+projects_container.appendChild(fragment);
+}
+
+      button.addEventListener("click", () => {
+        //classList.toggle
+        currentLanguage=currentLanguage==="en"?"es":"en";
+       if(currentLanguage==="en"){
+        button.textContent="ES"
+        console.log("content in english")
+        article_2.querySelector("h2").textContent="Now I am improving my skills";
+
+        article_2.querySelector("h3").textContent="I am constantly learning because I enjoy it";
+        article_2.querySelector("h4").textContent="I also prioritize my soft skills";
+
+        article_div_1.querySelector(".h2-1").textContent="Hi,I am santillan,"
+        article_div_1.querySelector(".h2-2").textContent="Full-Stack"
+        article_div_2.querySelector("h2").textContent="I'm passionate about the world of programming";
+        article_div_2.querySelector("p").textContent="I enjoy learning to improve my abilities";
+        renderProjects(personalProjects_ENGLISH);
+       }
+
+        if(currentLanguage==="es"){
+           button.textContent="EN"
+        console.log("contenido en español")
+          article_2.querySelector("h2").textContent="Ahora estoy mejorando mis habilidades"
+         article_2.querySelector("h2").classList.add("text-center");
+          article_2.querySelector("h3").textContent="Estoy aprendiendo constantemente porque me gusta"
+        article_2.querySelector("h4").textContent="También priorizo mis habilidades blandas"
+        article_div_1.querySelector(".h2-1").textContent="Hola, soy santillan,"
+        article_div_1.querySelector(".h2-2").textContent="Full-Stack"
+        article_div_2.querySelector("h2").textContent="Me gusta el mundo de la programación";
+        article_div_2.querySelector("p").textContent="Me gusta aprender para mejorar mis habilidades";
+      renderProjects(personalProjects_SPANISH);
+        }
+      });
+ 
+ </script>
+  </body>
+</html>

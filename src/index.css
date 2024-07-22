@@ -1,0 +1,198 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  box-sizing: border-box;
+}
+*,
+*:after,
+*:before {
+  box-sizing: inherit;
+  padding: 0;
+  margin: 0;
+}
+body {
+  background: rgb(2, 0, 36);
+  background: linear-gradient(
+    90deg,
+    rgba(2, 0, 36, 1) 0%,
+    rgba(2, 7, 44, 1) 0%,
+    rgba(3, 45, 79, 1) 56%,
+    rgba(2, 6, 43, 1) 100%,
+    rgba(4, 88, 163, 1) 100%
+  );
+  font-family: montserrat;
+}
+
+/*CREATE AN ANIMATION THAT THE CHILDREN GO TO THE LEFT, SOMETHING LIKE SCROLL TO LEFT*/
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+.using-scroll {
+  animation: scroll 10s linear infinite;
+  /* animation-name: scroll;
+         animation-duration: 10s;
+         animation-iteration-count: infinite;
+         animation-timing-function: linear; */
+}
+
+.wave-button {
+  position: relative;
+  padding: 15px 30px;
+  font-size: 16px;
+  color: #fff;
+  background: linear-gradient(135deg, #222223, #2c6fe2);
+  border: none;
+  border-radius: 50px;
+  overflow: hidden;
+  cursor: pointer;
+  background-size: 200% 200%;
+  animation: wave-animation 8s infinite ease-in-out reverse;
+}
+
+@keyframes wave-animation {
+  0% {
+    background-position: 0% 20%;
+  }
+  20% {
+    background-position: 20% 40%;
+  }
+  40% {
+    background-position: 40% 60%;
+  }
+  60% {
+    background-position: 60% 80%;
+  }
+  80% {
+    background-position: 80% 100%;
+  }
+  100% {
+    background-position: 0% 20%;
+  }
+}
+
+@keyframes grow {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(1.1);
+  }
+}
+
+.using-grow:hover {
+  animation: grow 1s linear normal;
+  cursor: pointer;
+  transform: scale(1.1);
+  transition: all 0.3s ease-in-out;
+}
+
+.blur-background {
+  /* rgba(38, 71, 114, 0.3)*/
+  background: rgba(18, 17, 17, 0.3); /* Fondo semitransparente */
+  backdrop-filter: blur(10px); /* Desenfoque */
+  -webkit-backdrop-filter: blur(20px); /* Desenfoque para navegadores Webkit */
+  padding: 0.4rem;
+
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  height: 2.8rem;
+  z-index: 999;
+  transition: all 0.3s ease-in-out;
+}
+.blur-card {
+  background: rgba(18, 17, 17, 0.3); /* Fondo semitransparente */
+  backdrop-filter: blur(10px); /* Desenfoque */
+  -webkit-backdrop-filter: blur(20px); /* Desenfoque para navegadores Webkit */
+
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.info {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+  text-decoration: none;
+  color: #000;
+}
+
+.info::after {
+  content: attr(data-info);
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 150%; /* Adjust as needed */
+  background-color: rgba(0, 0, 0, 0.75);
+  color: #fff;
+  padding: 5px 10px;
+  border-radius: 5px;
+  white-space: nowrap;
+  opacity: 0;
+  transition: opacity 0.3s;
+  pointer-events: none; /* Prevents the tooltip from being interactable */
+  z-index: 1;
+  visibility: hidden; /* Ensures the element is hidden when not hovered */
+}
+
+.info:hover::after {
+  opacity: 1;
+  visibility: visible; /* Makes the element visible on hover */
+}
+
+/*MODIFY THE BAR SLICE OF THE PAGE COLOR DARK BLUE AND THIN*/
+
+/* Para navegadores basados en WebKit como Chrome y Safari */
+::-webkit-scrollbar {
+  width: 8px; /* Ancho de la barra de desplazamiento vertical */
+  height: 8px; /* Altura de la barra de desplazamiento horizontal */
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1; /* Color de fondo del track de la barra */
+}
+
+::-webkit-scrollbar-thumb {
+  background: #0a0a0a; /* Color del thumb de la barra */
+  border-radius: 10px; /* Bordes redondeados del thumb */
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #555; /* Color del thumb al pasar el cursor */
+}
+
+/* Para Firefox */
+* {
+  scrollbar-width: thin; /* Ancho de la barra */
+  scrollbar-color: #0a0a0a #f1f1f1; /* Color del thumb y del track */
+}
+
+#root {
+  padding: 32px 0 0 0;
+  margin: 0 0;
+}
+@font-face {
+  font-family: "Montserrat-Bold"; /* Choose a name for your font */
+  src: url("/Montserrat-Bold.ttf") format("ttf"),
+    /* Adjust the path and format */ url("/Montserrat-Bold.ttf") format("ttf"); /* Adjust the path and format */
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* Add other font weights and styles if available */
+@font-face {
+  font-family: "YourFontName";
+  src: url("/Montserrat-Bold.ttf") format("ttf"),
+    url("/Montserrat-Bold.ttf") format("ttf");
+  font-weight: bold;
+  font-style: normal;
+}
+
+body {
+  font-family: "/Montserrat-Bold", sans-serif;
+}
