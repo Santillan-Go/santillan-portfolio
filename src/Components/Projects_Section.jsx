@@ -83,7 +83,8 @@ function Projects_Section({ language }) {
           return (
             <article
               key={project.title}
-              className="w-96 blur-card  rounded-xl p-3 sm:using-grow "
+              className="w-96 blur-card   rounded-xl p-4 sm:using-grow container 
+               card "
             >
               <img
                 src={project.image}

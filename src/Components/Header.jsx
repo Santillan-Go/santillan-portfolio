@@ -17,19 +17,19 @@ function Header({ changeLanguage, language }) {
     };
   }, []);
 
+  //create a function for sum two numbers
+
   return (
     <header
-      className={`flex justify-center  text-xl w-full
-         text-white sticky top-0  ${
-           top ? "blur-background" : "bg-transparent"
-         }`}
+      className={`flex justify-center items-center  text-xl w-full
+         text-white sticky top-0   ${top ? "blur-background" : "normal"}`}
     >
       <div className="flex font-medium sm:w-1/2 justify-evenly w-full sm:justify-between">
         <h1>Santillan</h1>
 
         <button
           onClick={changeLanguage}
-          className="language border border-gray-300 w-20 rounded-xl"
+          className="language border border-gray-300 w-20  rounded-xl h-8"
         >
           {language ? "EN" : "ES"}
         </button>

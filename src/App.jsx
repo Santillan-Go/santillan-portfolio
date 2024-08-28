@@ -6,7 +6,7 @@ import Projects_Section from "./Components/Projects_Section";
 import Skill_Section from "./Components/Skill_Section";
 
 function App() {
-  const [language, setLanguage] = useState(false);
+  const [language, setLanguage] = useState(true);
   const changeLanguage = () => {
     setLanguage(!language);
   };
