@@ -25,7 +25,9 @@ function Header({ changeLanguage, language }) {
          text-white sticky top-0   ${top ? "blur-background" : "normal"}`}
     >
       <div className="flex font-medium sm:w-1/2 justify-evenly w-full sm:justify-between">
-        <h1>Santillan</h1>
+        <h1 className="font-bold bg-gradient-to-r from-blue-600 to-white bg-clip-text text-transparent">
+          Santillan
+        </h1>
 
         <button
           onClick={changeLanguage}

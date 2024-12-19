@@ -125,7 +125,35 @@ body {
 
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
+@keyframes wave {
+  0% {
+    left: -150px;
+  }
+  100% {
+    left: 100%;
+  }
+}
+.skeleton {
+  position: relative;
+  overflow: hidden;
+}
 
+/* Animation */
+.skeleton::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -140px; /* Start outside the left */
+  width: 140px;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    rgba(255, 255, 255, 0) 0%,
+    rgba(255, 255, 255, 0.5) 50%,
+    rgba(255, 255, 255, 0) 100%
+  );
+  animation: wave 1.6s infinite ease-in-out;
+}
 .info {
   position: relative;
   display: inline-block;

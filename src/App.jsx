@@ -16,7 +16,7 @@ function App() {
       <main className="lg:p-8 p-3  w-full text-white">
         <Main_section language={language} />
 
-        <Skill_Section />
+        <Skill_Section language={language} />
 
         <Projects_Section language={language} />
 

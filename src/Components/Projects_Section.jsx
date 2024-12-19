@@ -3,6 +3,21 @@ import React, { useRef } from "react";
 function Projects_Section({ language }) {
   const personalProjects_SPANISH = useRef([
     {
+      title: "Teacher-AI",
+      description:
+        "Una web app donde puedes crear tus tutores para ayudarte con tus estudios o cualquier otro tema",
+      image: "last_app.png",
+      link: "https://teacher-ai-theta.vercel.app/",
+      technologiesImages: [
+        "react.png",
+        "nextjs.png",
+        "tailwind.png",
+        "mongodb.png",
+      ],
+      git: "https://github.com/Santillan-Go/teacher-ai-santillan",
+    },
+    ,
+    {
       title: "App Movies",
       description:
         "App Movies es una app que te permite buscar peliculas y series .",
@@ -35,6 +50,21 @@ function Projects_Section({ language }) {
   ]);
 
   const personalProjects_ENGLISH = useRef([
+    {
+      title: "Teacher-AI",
+      description:
+        "A web app where you can create your tutors to help you with your studies or any other subject",
+      image: "last_app.png",
+      link: "https://teacher-ai-theta.vercel.app/",
+      technologiesImages: [
+        "react.png",
+        "nextjs.png",
+        "tailwind.png",
+        "mongodb.png",
+      ],
+      git: "https://github.com/Santillan-Go/teacher-ai-santillan",
+    },
+    ,
     {
       title: "App Movies",
       description:
