@@ -21,8 +21,8 @@ function Projects_Section({ language }) {
       title: "App Movies",
       description:
         "App Movies es una app que te permite buscar peliculas y series .",
-      link: "https://moviemdn.netlify.app/",
-      image: "movies.png",
+      link: "https://movies-mdn.netlify.app/",
+      image: "image.png",
       technologiesImages: ["react.png", "css.png"],
       git: "https://github.com/Santillan-Go/movies-mdn",
     },
@@ -69,8 +69,8 @@ function Projects_Section({ language }) {
       title: "App Movies",
       description:
         "App Movies is an app that allow you to search movies and tv series",
-      image: "movies.png",
-      link: "https://moviemdn.netlify.app/",
+      image: "image.png",
+      link: "https://movies-mdn.netlify.app/",
       technologiesImages: ["react.png", "css.png"],
       git: "https://github.com/Santillan-Go/movies-mdn",
     },
