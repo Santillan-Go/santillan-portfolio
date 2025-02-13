@@ -4,7 +4,7 @@ import Header from "./Components/Header";
 import Main_section from "./Components/Main_section";
 import Projects_Section from "./Components/Projects_Section";
 import Skill_Section from "./Components/Skill_Section";
-
+import { SiGmail } from "react-icons/si";
 function App() {
   const [language, setLanguage] = useState(true);
   const changeLanguage = () => {
@@ -20,29 +20,27 @@ function App() {
 
         <Projects_Section language={language} />
 
-        <section className="h-[80vh] p-1">
+        <section className="h-[25vh] p-1 flex items-center flex-col ">
           <h2 className="font-semibold text-3xl text-gray-200   rounded-2xl p-1">
             {language ? "Contáctame" : "Contact me"}
           </h2>
 
-          <article className="p-2">
-            <div className="flex w-1/2 gap-4  ">
-              <img
-                src="email.png"
-                alt="image_imail"
-                className="sm:w-14 sm:h-14 w-7 h-7 p-1 bg-white rounded-full"
-              />
-
-              <h3 className="font-semibold sm:text-xl  text-white">
-                santillango10405@gmail.com
-              </h3>
-            </div>
+          <article className="p-4 w-96 blur-card rounded-xl flex items-center gap-4 shadow-lg transition-transform hover:scale-105">
+            <SiGmail className="text-[#D44638] w-6 h-6 " />
+            {/* <img
+              src="gmail.png"
+              alt="gmail-icon"
+              className="w-10 h-10 sm:w-12 sm:h-12 bg-white rounded-full"
+            /> */}
+            <h3 className="font-semibold sm:text-xl text-lg text-white">
+              santillango10405@gmail.com
+            </h3>
           </article>
         </section>
       </main>
 
       <footer className="blur-background h-12 text-white flex justify-center items-center">
-        <p className="text-lg font-semibold"> 2024 - Santillan's Portfolio</p>
+        <p className="text-lg font-semibold"> 2025 - Santillan's Portfolio</p>
       </footer>
     </>
   );

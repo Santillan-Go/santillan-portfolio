@@ -1,87 +1,55 @@
 function Main_section({ language }) {
   return (
-    <section className="p-4 lg:p-10 max-w-7xl mx-auto flex lg:flex-row flex-col sm:gap-8 gap-16 justify-evenly">
-      <article className="blur-card rounded-2xl flex flex-col basis-1/2 lg:pr-12 p-4">
-        <figure className="flex flex-col">
-          <figcaption className="flex lg:flex-row items-center lg:justify-start flex-col gap-5 mb-8">
-            <img
-              src="santillan.jpg"
-              alt="santillan-developer"
-              className="rounded-full w-24 h-24 lg:w-28 lg:h-28 object-cover transition-transform hover:scale-105"
-            />
+    <section className="p-6 lg:p-12 max-w-6xl mx-auto flex justify-center  flex-col lg:flex-row items-center gap-12">
+      {/* Left Side - Image & Intro */}
+      <div className="relative w-60 h-60 lg:w-72 lg:h-72 flex-shrink-0">
+        <img
+          src="santillan.jpg"
+          alt="santillan-developer"
+          className="w-full h-full object-cover rounded-full shadow-lg border-4 border-blue-600"
+        />
+        <div className="absolute bottom-0 right-0 bg-blue-600 text-white px-4 py-2 rounded-lg shadow-md text-sm font-medium">
+          {language ? "Desarrollador Full-Stack" : "Full-Stack Developer"}
+        </div>
+      </div>
 
-            <div className="space-y-2">
-              <h2 className="text-2xl lg:text-3xl font-bold bg-gradient-to-r from-blue-600 to-white bg-clip-text text-transparent">
-                {language ? "Hola, soy Santillan." : "Hi, I'm Santillan."}
-              </h2>
-              <h2 className="text-2xl lg:text-4xl font-bold">
-                {language ? "Desarrollador Full-Stack" : "Full-Stack Developer"}
-              </h2>
-            </div>
-          </figcaption>
+      {/* Right Side - Content */}
+      <div className="flex flex-col space-y-6 text-center lg:text-left max-w-lg">
+        <h1 className="text-3xl lg:text-4xl font-bold bg-gradient-to-r from-blue-600 to-purple-500 bg-clip-text text-transparent">
+          {language ? "Hola, soy Santillan" : "Hi, I'm Santillan"}
+        </h1>
 
-          <div className="space-y-6">
-            <h2 className="text-lg lg:text-xl">
-              {language
-                ? "Estoy apasionado por el mundo de la programación."
-                : "I am passionate about the world of programming."}
-            </h2>
-            <p className="text-lg lg:text-xl text-gray-700 dark:text-gray-300">
-              {language
-                ? "Me encanta aprender para mejorar mis habilidades y actualmente estoy perfeccionando mis conocimientos."
-                : "I love learning to improve my skills and I am currently refining my knowledge."}
-            </p>
-
-            <nav className="flex gap-4 items-center">
-              <a
-                href="santillan.pdf"
-                target="_blank"
-                className=" skeleton px-6 py-3 bg-gradient-to-r from-blue-600 to-slate-900 text-white rounded-lg 
-                          transition-all hover:shadow-lg hover:scale-105 font-medium"
-              >
-                Currículum
-              </a>
-
-              <a
-                href="https://www.linkedin.com/in/carlos-santillan-70b4522b0"
-                target="_blank"
-                className="p-2 rounded-lg border border-gray-300 hover:border-blue-500  bg-slate-300 transition-all hover:shadow-lg hover:scale-110 font-medium"
-              >
-                <img
-                  src="linkedin.svg"
-                  alt="linkedin"
-                  className="w-8 h-8 rounded "
-                />
-              </a>
-              <a
-                href="https://github.com/Santillan-Go"
-                target="_blank"
-                className="p-2 rounded-lg border border-gray-300 hover:border-blue-500
-                 bg-slate-300 transition-all hover:shadow-lg hover:scale-110 font-medium"
-              >
-                <img
-                  src="gitlight.svg"
-                  alt="github"
-                  className="w-8 h-8 rounded"
-                />
-              </a>
-            </nav>
-          </div>
-        </figure>
-      </article>
-
-      <article className="blur-card rounded-2xl flex flex-col basis-1/2 justify-center space-y-6 lg:pl-12 p-4 border-l-0 ">
-        <h3 className="text-xl lg:text-2xl font-medium">
+        <p className="text-lg text-gray-700 dark:text-gray-300">
           {language
-            ? "Estoy constantemente esforzándome por crecer porque realmente disfruto el proceso de aprendizaje."
-            : "I am constantly striving to grow because I genuinely enjoy the learning process."}
-        </h3>
-        <h4 className="text-lg lg:text-xl text-gray-700 dark:text-gray-300">
-          {language
-            ? "También doy prioridad a desarrollar mis habilidades blandas."
-            : "I also prioritize developing my soft skills."}
-        </h4>
-      </article>
+            ? "Apasionado por la tecnología y el desarrollo web. Siempre explorando nuevas formas de mejorar mis habilidades."
+            : "Passionate about technology and web development. Always exploring new ways to improve my skills."}
+        </p>
+
+        {/* Buttons & Social Links */}
+        <div className="flex flex-wrap justify-center lg:justify-start gap-4">
+          <a
+            href="santillan.pdf"
+            target="_blank"
+            className="px-6 py-3 bg-blue-600 text-white rounded-lg shadow-lg hover:bg-blue-700 transition-all"
+          >
+            {language ? "Descargar CV" : "Download CV"}
+          </a>
+          <a
+            href="https://www.linkedin.com/in/carlos-santillan-70b4522b0"
+            target="_blank"
+            className="p-3 bg-gray-200 hover:bg-gray-300 rounded-full shadow-md transition-all"
+          >
+            <img src="linkedin.svg" alt="linkedin" className="w-6 h-6" />
+          </a>
+          <a
+            href="https://github.com/Santillan-Go"
+            target="_blank"
+            className="p-3 bg-gray-200 hover:bg-gray-300 rounded-full shadow-md transition-all"
+          >
+            <img src="gitlight.svg" alt="github" className="w-6 h-6" />
+          </a>
+        </div>
+      </div>
     </section>
   );
 }

@@ -23,7 +23,7 @@ function Skill_Section({ language }) {
         {skills.map((skill, index) => (
           <div
             key={index}
-            className="flex flex-col items-center p-6 bg-white/5 rounded-lg 
+            className="flex flex-col items-center p-6 blur-card rounded-lg 
                      hover:bg-white/10 transition-all duration-300 
                      transform hover:-translate-y-1 cursor-pointer"
           >

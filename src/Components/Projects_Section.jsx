@@ -7,7 +7,7 @@ function Projects_Section({ language }) {
       description:
         "Una web app donde puedes crear tus tutores para ayudarte con tus estudios o cualquier otro tema",
       image: "last_app.png",
-      link: "https://teacher-ai-theta.vercel.app/",
+      link: "https://github.com/Santillan-Go/ai-app",
       technologiesImages: [
         "react.png",
         "nextjs.png",
@@ -55,7 +55,7 @@ function Projects_Section({ language }) {
       description:
         "A web app where you can create your tutors to help you with your studies or any other subject",
       image: "last_app.png",
-      link: "https://teacher-ai-theta.vercel.app/",
+      link: "https://github.com/Santillan-Go/ai-app",
       technologiesImages: [
         "react.png",
         "nextjs.png",
