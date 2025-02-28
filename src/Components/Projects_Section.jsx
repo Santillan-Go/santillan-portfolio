@@ -7,14 +7,14 @@ function Projects_Section({ language }) {
       description:
         "Una web app donde puedes crear tus tutores para ayudarte con tus estudios o cualquier otro tema",
       image: "last_app.png",
-      link: "https://github.com/Santillan-Go/ai-app",
+      link: "https://teacher-ai-theta.vercel.app/",
       technologiesImages: [
         "react.png",
         "nextjs.png",
         "tailwind.png",
         "mongodb.png",
       ],
-      git: "https://github.com/Santillan-Go/teacher-ai-santillan",
+      git: "https://github.com/Santillan-Go/ai-app",
     },
     ,
     {
@@ -55,14 +55,14 @@ function Projects_Section({ language }) {
       description:
         "A web app where you can create your tutors to help you with your studies or any other subject",
       image: "last_app.png",
-      link: "https://github.com/Santillan-Go/ai-app",
+      link: "https://teacher-ai-theta.vercel.app/",
       technologiesImages: [
         "react.png",
         "nextjs.png",
         "tailwind.png",
         "mongodb.png",
       ],
-      git: "https://github.com/Santillan-Go/teacher-ai-santillan",
+      git: "https://github.com/Santillan-Go/ai-app",
     },
     ,
     {
