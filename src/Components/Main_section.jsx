@@ -28,7 +28,7 @@ function Main_section({ language }) {
         {/* Buttons & Social Links */}
         <div className="flex flex-wrap justify-center lg:justify-start gap-4">
           <a
-            href="santillan.pdf"
+            href="santillan_cv.pdf"
             target="_blank"
             className="px-6 py-3 bg-blue-600 text-white rounded-lg shadow-lg hover:bg-blue-700 transition-all"
           >
