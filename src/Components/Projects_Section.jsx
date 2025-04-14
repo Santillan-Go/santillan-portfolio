@@ -42,7 +42,7 @@ function Projects_Section({ language }) {
       title: "Store",
       description:
         "Store es una app que te permite buscar y agregar al carrito tus productos favoritos.",
-      image: "store.png",
+      image: "store1.png",
       link: "https://store-santillan.vercel.app",
       technologiesImages: ["react.png", "nextjs.png", "tailwind.png"],
       git: "https://github.com/Santillan-Go/store-santillan",
@@ -90,7 +90,7 @@ function Projects_Section({ language }) {
       title: "Store",
       description:
         "Store is an app that allow you to search and add to cart your favorite products",
-      image: "store.png",
+      image: "store1.png",
       link: "https://store-santillan.vercel.app",
       technologiesImages: ["react.png", "nextjs.png", "tailwind.png"],
       git: "https://github.com/Santillan-Go/store-santillan",
